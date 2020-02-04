@@ -1,0 +1,19 @@
+body{
+}
+
+.button{
+    height: 100px;
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20%;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: red;
+}
