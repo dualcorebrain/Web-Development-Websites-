@@ -1,0 +1,171 @@
+<!-- https://www.youtube.com/watch?v=P0hPSOpHa8E -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <link rel="stylesheet" href="CSS\cssNEW.css">
+    <script src="https://kit.fontawesome.com/707251d07c.js" crossorigin="anonymous"></script>
+    <title> CCSS learning</title>
+  </head>
+
+
+  <body>
+
+    <div class="container">
+
+      <nav class="desk">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About Us </a></li>
+          <li><a href="#">Maps</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <nav class="mob">
+
+        <div class="hamburger-btn">
+          <i class="fas fa-times"></i>
+          <i class="fas fa-bars"></i>
+
+
+        </div>
+
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About Us </a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+
+      <div class="header"></div>
+    </div>
+
+
+  </body>
+
+
+
+</html>
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container nav.desk,
+.container nav.mob{   /* This is added afterwards */
+    width: 100%;  /* Sets the width of the class to 100% */
+    background: #364a4b; /* This gives it the color and we can see it */
+    height: 60px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+    position: fixed;  /* Fixes Navigation bar to the top */
+    top: 0;
+    left: 0;
+}
+
+nav.desk ul{
+    list-style: none;
+    width: 75%;  /* If we want to use margin:auto below we have to give it initial width or height else it wouldnt work */
+                /* 75% of what? Its 75% of its parent which is the class named 'desk' which we set the width of in the code above */
+    height: 60px;
+    margin: 0 auto;  /* Remaining horizontal width will take available space from left and right this bassically centers*/
+}
+
+nav.desk ul li{
+    width: 20%;  /* 20% of ul tag (which is the aprent class). In other words 20% of 75% of 100% by looking at the code above */
+    float: left; /* similar to inline block, this will make all of 'li' tags come in a single row   */
+    /* Why exactly did we float left? Try putting in "right", its because of the order in which the buttons appear */
+    text-align: center; /* Centers them */
+    line-height: 60px; /* Vertical height of the text */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* YahooBaba YT video on transition- https://www.youtube.com/watch?v=NdS-MjZiihw */
+    /* Transition bassically means 'smoothness' */
+    /* When to use animation or transition? Transition is usually used for single time, for looping its animation */
+    /* transition: [transition-property] [transition-duration] [transition-delay] [transition-timing-function] */
+    
+    /* [transition-property]- What do we want the transition to happen to?
+        values- all (all properties will get transition effect), none, height, width,
+        So li tag in this example, all properties of li will be transitioned, height, width, etc, everything.
+
+        [transition-duration]- Transition time from start to end
+
+        [transition-delay]- Initial delay
+
+        [transition-timing-function]- similar to the animation property values, so look for that in linear gradient button CSS saved code
+        values- ease, ease-in, ease-out, linear, cubic-bezier
+
+
+    */
+}
+
+nav ul li:hover{
+    background: #a3ada5;  /* Why is this transitioning? Its because of transition property above */
+}
+
+nav ul li.active{
+    background: #a3ada5;  /* Background color for the first button will always be this, active is just class name on HTML file */
+}
+
+/* Found out how this hides the other tags! This bassically makes the white (which is the color of the webpage)
+    so we cant see them. Disable "user-select: none;" and then try hilighting the webpage to see where they are hidden! */
+nav ul li a{
+    color: #fff;            /* I have no idea on how this hides the other a tags (found out! look up) */
+    text-decoration: none;  
+}
+
+nav.mob,
+.hamburger-btn{            /* Hides the navigation bar in desktop and the hamburger and cross icon while desktop mode is active */
+    display: none;
+}
+
+@media screen and (max-width: 700px){ /* This works on display below 700px, thats why is 'maximum width' */
+    nav.desk{
+        display: none;      /* We basically make the navigation bar disappear below 700px so the mobile version cant take over */
+    }
+
+    nav.mob,
+    .hamburger-btn{
+        display: block;         /* Why display block? Because the list will be vertical for mobile */
+    }
+
+    .hamburger-btn{
+        position: relative;
+    }
+
+    .hamburger-btn .fas{
+        position: fixed;
+        right: 25px;
+        top: 15px;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .mob ul{
+        margin-top: 60px;
+        background: #364a4b;
+    }
+
+    .mob li{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+
+    }
+}
+
+/* Skipped the Jquery knowledge since I dont know javascript */

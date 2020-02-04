@@ -1,0 +1,266 @@
+<!-- https://www.youtube.com/watch?v=z7lkDctYqq8 -->
+<!-- "Create Website Layout with CSS Flexbox - I in Hindi/Urdu" - yahooBaba youtube -->
+<!-- Dont understand many things -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" >
+    <link rel="stylesheet" href="CSS\cssNEW.css">
+    <title> NOT UK punk bands</title>
+    <script src="https://kit.fontawesome.com/abb5ab3291.js"></script>
+
+  </head>
+  <body>
+      <header>
+        <nav id="menu">
+          <ul>
+            <li><a href = "">Home</a></li>
+            <li><a href = "">About Us</a></li>
+            <li><a href = "">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="logo">
+          <a href="">Yahoo Baba</a>
+        </div>
+
+
+        <nav id="social-links">
+          <ul>
+            <li><a href = ""><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href = ""><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href = ""><i class="fab fa-google-plus-g"></i></a></li>
+          </ul>
+
+       </nav>
+    </header>
+
+    <div id="main">
+      <aside class=""><!-- This is the side bar tag-->
+        <ul>
+          <li><a href="">Some Link</a></li>
+          <li><a href="">Some Link</a></li>
+          <li><a href="">Some Link</a></li>
+          <li><a href="">Some Link</a></li>
+          <li><a href="">Some Link</a></li>
+        </ul>
+
+        <img src="\images\nier-automata.jpg" alt="">
+      </aside>  
+
+      <article>
+        <h2>welcome to our website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Quas aut atque impedit labore, placeat, ipsa veniam at 
+          magnam commodi eius debitis dolorum tempora dolore ea expedita? 
+          Corrupti aliquam explicabo ad?</p>
+
+        <h2>Our services</h2>
+        <div class="service-container">
+          <div class="service-box">
+
+              <div class="service-img">
+                  <img src="\images\breaking-bad.jpg" alt="">
+                </div>
+      
+                <div class="service-title">
+                  <h3>Web Designing</h3>
+                </div>
+      
+                <div class="service-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam 
+                    repellat dolorem qui earum ratione, quo doloremque minima iste harum,
+                     perferendis facere excepturi assumenda
+                     illo voluptate, animi voluptatibus. Provident, tenetur pariatur.</p>
+                </div>
+      
+                <div class="call-to-action">
+                  <a href="">Read More</a>
+                </div>
+
+
+          </div>
+
+          <div class="service-box">
+            
+              <div class="service-img">
+                  <img src="\images\code-geass.jpg" alt="">
+                </div>
+      
+                <div class="service-title">
+                  <h3>Web Development</h3>
+                </div>
+      
+                <div class="service-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam 
+                    repellat dolorem qui earum ratione, quo doloremque minima iste harum,
+                     perferendis facere excepturi assumenda
+                     illo voluptate, animi voluptatibus. Provident, tenetur pariatur.</p>
+                </div>
+      
+                <div class="call-to-action">
+                  <a href="">Read More</a>
+                </div>
+
+
+          </div>
+
+          <div class="service-box">
+            
+              <div class="service-img">
+                  <img src="\images\dark-souls-3.jpg" alt="">
+                </div>
+      
+                <div class="service-title">
+                  <h3>Mobile App Development</h3>
+                </div>
+      
+                <div class="service-desc">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam 
+                    repellat dolorem qui earum ratione, quo doloremque minima iste harum,
+                     perferendis facere excepturi assumenda
+                     illo voluptate, animi voluptatibus. Provident, tenetur pariatur.</p>
+                </div>
+      
+                <div class="call-to-action">
+                  <a href="">Read More</a>
+                </div>
+
+
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <footer>
+      made by yahoobaba
+    </footer>
+  </body>
+</html>
+
+*{
+    box-sizing: border-box; /* No width increase due to this, rather vertical increase */
+}
+
+body{
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header{
+    background: rgb(96, 117, 53);
+    display: flex; 
+    align-items: center;  /* Look in the book about this */
+    padding: 15px 0;
+}
+
+header a{
+    color: #fff;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+header ul{
+    list-style: none;
+    display: flex; /* Anything inside ul will now by in row */
+    padding: 0; /* By default ul tag has margin and padding */
+    margin: 0;
+}
+
+#logo{
+    margin: 0 auto;  
+    /* We can use margin inside flexbox in a speacial way! If we say margin:auto for logo, then the logo will just move
+        to the right. We also set it to be 0 from the top */
+    
+    font-size: 30px;
+}
+
+
+
+#menu li{
+    padding: 10px;  
+}
+
+#social-links li{
+    padding: 10px;
+}
+/* These two space the buttons out little bit */
+
+#main{
+    display: flex;
+
+}
+
+aside{
+    flex:0 0 20vw;
+    background: beige;
+    padding: 10px;
+}
+
+aside ul{
+    list-style:none;
+    padding: 0;
+}
+
+aside ul a{
+    color:  rgb(96, 117, 53);
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+aside img{
+    width: 100%;
+}
+
+.service-container{         
+    display: flex;
+    justify-content: space-between;
+    /* Makes all three things inside the conainer appear in the same row */
+}
+
+.service-box{
+    border: 1px solid #eee;
+    flex-basis: 32%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.call-to-action{
+    align-self: flex-start;
+    margin-top: auto; /* similar to margin:auto being used above */
+}
+.call-to-action a{
+    background-color: grey;
+    color: white;
+    padding: 8px 13px;
+    display: block;
+    border: 2px solid transparent;
+
+}
+
+.call-to-action a:hover{
+    background-color: black;
+
+
+}
+
+.service-box img{
+    width: 100%;   
+     /* So all the images under the service-box class now take 100% of the
+      width ALL TOGETHER */
+}
+
+footer{
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

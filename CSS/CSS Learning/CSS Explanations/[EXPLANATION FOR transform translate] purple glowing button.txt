@@ -1,0 +1,92 @@
+https://www.youtube.com/watch?v=XzXBdN6-1Gc
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS\cssNEW.css">
+    <title> NOT UK punk bands</title>
+  </head>
+  <body>
+    <a href="#">Button</a>
+  </body>
+</html>
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #00041d;
+}
+
+a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+/* This picks the top left corner to center the element from. However We want to center from the middle. 
+   This is why we need transform:translate() function.
+*/
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 40px;
+  background: #00072f;
+  text-align: center;
+  line-height: 40px;
+  /* line-height adjusted the height of the text */
+  color: #555;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:sans-serif;
+  letter-spacing: 6px;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: 5s;
+
+}
+
+
+a:hover{
+  color: #fff;
+  box-shadow: -15px 0 50px rgba(255, 20, 152, 1),15px 0 50px rgba(122, 0, 255, 1);
+  text-shadow: 0 0 10px rgba(255, 255, 225, 0.5), 0 0 25px rgba(255, 255, 255, 0.5),0 0 35px rgba(255, 255, 255, 0.5) ;
+}
+
+a:before{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  background: rgba(022, 20, 152, 0);
+  filter: blur(4px); 
+  transition: 5s;
+  z-index: -1;
+
+}
+
+a:hover:before{
+  background: rgba(022, 20, 152, 1);
+  transform: scaleX(5);
+}
+
+a:after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(122, 0, 255, 0);
+  filter: blur(4px); 
+  z-index: 1;
+  transition: 5s;
+  mix-blend-mode: lighten;
+
+}
+
+a:hover:after{
+  background: rgba(122, 0, 255, 1);
+  transform: scaleX(5);
+}

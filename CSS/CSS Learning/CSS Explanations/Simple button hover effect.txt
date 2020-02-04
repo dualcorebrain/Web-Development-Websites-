@@ -1,0 +1,74 @@
+https://www.youtube.com/watch?v=Egh6w9rH4II
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS\cssNEW.css">
+    <title> NOT UK punk bands</title>
+  </head>
+  <body>
+    <a href="#" class=btn>Button</a>
+  </body>
+</html>
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(blue);
+}
+
+.btn{
+  font-family: arial;
+  text-transform: uppercase;
+  font-size: 30px;
+  width: 240px;
+  height: 60px;
+  border-radius: 80px;
+  line-height: 60px;
+  text-align: center;
+  border: 3px solid #009688;
+  display: block;
+  text-decoration: none;
+  margin: 300px auto;
+  color: #009688;
+  position:relative;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.btn:before{
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #009688;
+  opacity: .5;
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.btn:after{
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #009688;
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+
+.btn:hover{
+  color: #fff;
+}
+
+.btn:hover:before{
+  top: 0;
+}
