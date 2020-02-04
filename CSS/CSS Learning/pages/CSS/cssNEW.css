@@ -2,6 +2,7 @@ body{
 }
 
 .button{
+    height: 100px;
     background-color: blue;
     border: none;
     color: white;
