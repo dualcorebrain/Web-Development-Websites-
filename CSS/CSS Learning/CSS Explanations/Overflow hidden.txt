@@ -1,0 +1,4 @@
+Overflow hidden automatically resizes the height and the width to suit the elements inside it.
+
+Search this using CTRL+F " Our footer background is too short. Fortunately, we already know how to fix that. Let’s replace the footer’s explicit height with another overflow: hidden so it can accommodate any number of grid items:" 
+on- https://internetinsgishard.com/html-and-css/floats/

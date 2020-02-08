@@ -1,0 +1,21 @@
+https://internetingishard.com/html-and-css/flexbox/
+
+
+FlexBox is an alternative to CSS Float.
+Float only gives us Horizontal position, whereas Flexbox gives us full control. Float was mainly made for 'magazine' styled layouts
+
+We should use Flexbox completely and only rely on floats for text to flow around a box.
+
+Flex container looks at the whole container whereas flex items looks at individual elements within the container
+
+Think of Flexbox and CSS in general as boxes within boxes 
+Use of Flexbox is entire nested boxes within each other
+
+Everything in CSS is defaultly rendered with CSS's box model. But display:flex tells CSS donts use the 
+box model instead use Flexbox instead.
+
+
+justify-content: center; Important look this up on the website and the CSS Flexbox cheat sheet
+Similar to 'margin: 0 auto' however notice rather than focusing on individual element we simply
+did that to the container. This is a commmon theme in CSS
+
