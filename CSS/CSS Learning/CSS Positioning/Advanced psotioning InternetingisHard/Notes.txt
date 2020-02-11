@@ -1,0 +1,5 @@
+CSS's positoning is by default 'static'
+We can use 'relative' 'absolute' 'fixed'  and that will make it different.
+
+Most of webpage should be statically psotioned but inside it may contain other types of positionings
+

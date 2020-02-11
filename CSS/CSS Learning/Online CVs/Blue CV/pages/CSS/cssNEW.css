@@ -65,20 +65,31 @@ button:hover{
     background-color: rgba(0, 136, 169, 0.9);
 }
 
-/*----------description-------*/
-
 
 /*----------Main Body-------*/
 
 .main-body-container{
     border: 1px solid white;
-    height: 700px;
-    width: 500px;
+    height: 920px;
+    width: 60%;
     display: flex;
     justify-content: flex-end;
-    margin:200px 350px;
+    margin: 120px 350px;
     position: absolute;
     top: 0px;
+    left: 10px;
+
+}
+
+/*----------Main Body Text-------*/
+.main-body-container .main-body-text h1{
+    color: white;
+}
+
+.main-body-container .main-body-text{
+    display: flex;
+    justify-content: center;
+
 }
 
 
