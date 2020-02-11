@@ -1,0 +1,111 @@
+
+
+/* Syntax of 'animation' shorthand version;  */
+/* animation:[name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] */
+
+/* [name] or animatino-name- name of the @ function */
+
+/* [duration] or animation-duration- Duration of the function usually in seconds "s"*/
+
+/* [timing-function] or animation-timing-funcion- Sets how an animation progresses though each duration of each cycle 
+  Keyword values:
+  ease (starts slow speeds up then ends slow)
+  ease-in (starts slow then speeds up)
+  ease-out (starts normally then slows down)
+  ease-in-out (similar to ease)
+  linear (constant speed)
+  step-start (
+  step-end
+  cubic-bezier(w,x,y,z)- wxyz, we can make our own curve and control acceleration and decceleration. 
+                         for best experience use 'cubic-bezier generator'on google                         
+*/
+
+/* [delay] or animation-delay - Normal delay at the beginning */
+
+/* [iteration-count] or aniamtion-iteration-count - number of times that animation repeats, we can specify this as infinite */
+
+/* [direction] or animation-direction - direction of the animation
+   keywords:
+   - normal (default)
+   - reverse
+   - alternate (goes normal then reverses)
+   - alternate-reverse (opposite directions of alternate)
+
+*/
+
+/* [fill-mode] or animtion-fill-mode - controls how the element looks after its animation finishes
+    keyword: 
+    - forwards - last frame of the animation is how the element looks after the animation finishes
+*/
+
+/* [play-state] or animation-play-state - controls whether the animation is played or paused. */
+a:hover{
+  animation: animate 9s linear infinite;  /* This calls the "animate" (keyframe) 'class' down below!
+  This is why we have written 'animate' in the beginning on this property  */
+} 
+
+
+
+/* Best things to animate is position, scale, rotation and opacity in CSS */
+/* IF we animate anything else then we may not have 60fps which is undesirable */
+
+/* How to trigger? */
+/* We can have either Hover pseudo class or class changes */
+
+
+/* GENERAL SYNTAX OF KEYFRAME
+  @keyframe [name]{
+    from{
+      [styles]
+    }
+    to{
+      [styles]
+    }
+  }
+/* We can also use 0% and 100% instead of "to" and "from" like below. */
+
+
+@keyframes animate{
+/* We need to change the background color of the button, we can choose it by changing the position since
+ thê background's position above is 400% */
+  0%{
+    background-position: 0%;
+  }
+
+  100%{
+    background-position: 400%;
+  }
+
+}
+
+/*This is pretty good resouce for learning a::before https://www.youtube.com/watch?v=SXQ9l0ScDEA */
+a::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.01s;
+}
+
+a:hover::before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 9s linear infinite;
+}
+
+/* This generates the rainbow colored background */
+/* DONT FULLY UDNERSTAND THIS! */
+
+a::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
